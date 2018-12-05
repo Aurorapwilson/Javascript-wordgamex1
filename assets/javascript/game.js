@@ -1,11 +1,32 @@
 // Word guess game steps/comments example
 // Define array of words to choose from
 let randomWordArr = [ 'spidey', 'friendly','neighbourhood','maryjane','peterparker', 'dailyBugle', 'AuntMay', 'NYC', 'senses', 'tingling'];
+// create variables
+let wins = 0;
+let losses =0;
+let wrongLetter = [];
+let guessesLeft = 9;
+let underScores = [];
+let userGuesses = [];
+let randomWord = [];
 
-// Want to choose randomly from array
-// Create a large list of words*
+
 // Then we choose from the array above
-let randomWord = randomWordArr [Math.floor (Math.random() * randomWordArr.length)];
+function startGame (){
+	// picks a randomword
+	 randomWord = randomWordArr [Math.floor (Math.random() * randomWordArr.length)];
+	// take wordbank and create underscores for each 
+	for(var i = 0; i<randomWord.length; i++)
+	{
+		//push to underScores
+		underScores.innerHTML('_');
+
+	}
+}
+
+// Call game
+startGame();
+ 
 
 // Create globals
 let s;

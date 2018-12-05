@@ -1,0 +1,11 @@
+body {
+    background-color: #e60000;
+    font-family: 'Sedgwick Ave', cursive;
+    font-family: 'Bangers', cursive;
+}
+
+#toggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+}

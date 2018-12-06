@@ -4,11 +4,14 @@ let randomWordArr = [ 'spidey', 'friendly','neighbourhood','maryjane','peterpark
 // create variables
 let wins = 0;
 let losses =0;
+let count = 0;
+
 let wrongLetter = [];
 let guessesLeft = 9;
 let underScores = [];
 let userGuesses = [];
 let randomWord = [];
+let answerArray=[];
 
 
 // Then we choose from the array above
@@ -19,7 +22,7 @@ function startGame (){
 	for(var i = 0; i<randomWord.length; i++)
 	{
 		//push to underScores
-		underScores.innerHTML('_');
+		underScores.innerHTML= "any value that you want";
 		console.log([i]);
 
 	}
@@ -34,7 +37,7 @@ let s;
 let counter = 0;
 
 // Empty array to store the globals
-let answerArray = [];
+
 
 // Create a function that fills the answer array with underscores
 // Make the number of underscores match the letters in each randomly generated word
@@ -93,5 +96,6 @@ function letter ( )
 
 // this shakes spiderman image
 $( document ).click(function() {
+	alert("shake")
     $( "#toggle" ).effect( "shake" );
   });

@@ -20,6 +20,7 @@ function startGame (){
 	{
 		//push to underScores
 		underScores.innerHTML('_');
+		console.log([i]);
 
 	}
 }
@@ -37,7 +38,7 @@ let answerArray = [];
 
 // Create a function that fills the answer array with underscores
 // Make the number of underscores match the letters in each randomly generated word
-Function startUp ( )
+function startUp ( )
 
 {
 
@@ -45,17 +46,17 @@ for (var i = 0; i < randomWord.length; i++)
 
 {
 
-answerArray[i] = “_”;
+answerArray[i] = ('_');
 
 }
 
 // put them in a string 
-s = answerArray.join(“ “);
+s = answerArray.join("_");
 document.getElementById('answer').innerHTML = s;
 
 }
 
-function Letter ( )
+function letter ( )
 {
 // Here we get the letter that the user typed in input box
 	let letter = document.getElementById('letter').value;
@@ -86,7 +87,7 @@ function Letter ( )
     // just a thing to annoy :) 
 	if(count>5)
 	{
-	document.getElementById(“stat”).innerHTML = “Com on - you should have guessed it by now”;
+	document.getElementById("stat").innerHTML = "Keep guessing, but hurry it up!";
 	}
 }
 

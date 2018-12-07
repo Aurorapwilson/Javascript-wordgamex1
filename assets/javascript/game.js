@@ -22,8 +22,8 @@ function startGame (){
 	for(var i = 0; i<randomWord.length; i++)
 	{
 		//push to underScores
-		underScores.innerHTML= "any value that you want";
-		console.log([i]);
+		underScores.innerHTML= ('_');
+		console.log(randomWord);
 
 	}
 }
@@ -58,6 +58,10 @@ s = answerArray.join("_");
 document.getElementById('answer').innerHTML = s;
 
 }
+function validate() {
+	var element = document.getElementById('letter');
+	element.value = element.value.replace(/[^a-zA-Z]+/, '');
+  };
 
 function letter ( )
 {
@@ -72,7 +76,7 @@ function letter ( )
 
             // now, if the randomword contains a letter that the user typed in 
 			if (randomWord[i] === letter)
-			{
+				{
                 // assig it to letter
 				answerArray[i] = letter;
 				}
@@ -84,8 +88,10 @@ function letter ( )
           });
         // here is how many ties it takes to guess
 		count++;
+
 		document.getElementById("counter").innerHTML = "No of Clicks:" + count;
 		document.getElementById("answer").innerHTML = answerArray.join("");
+		document.getElementById('letter').value = '';
     }
     // just a thing to annoy :) 
 	if(count>5)
@@ -96,6 +102,6 @@ function letter ( )
 
 // this shakes spiderman image
 $( document ).click(function() {
-	alert("shake")
+	// alert("shake")
     $( "#toggle" ).effect( "shake" );
   });
